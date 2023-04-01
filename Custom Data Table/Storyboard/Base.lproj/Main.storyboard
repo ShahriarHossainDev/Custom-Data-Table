@@ -20,18 +20,48 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYL-cJ-elo">
+                                <rect key="frame" x="165" y="798" width="84" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Uv-Ma-kPX">
+                                        <rect key="frame" x="2" y="2" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="I04-vL-haY"/>
+                                            <constraint firstAttribute="height" constant="40" id="mRn-rz-yjt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Next">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                            <color key="baseForegroundColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ShY-Yo-mYs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7Uv-Ma-kPX" secondAttribute="trailing" constant="2" id="lJO-xL-HvT"/>
+                                    <constraint firstItem="7Uv-Ma-kPX" firstAttribute="top" secondItem="zYL-cJ-elo" secondAttribute="top" constant="2" id="qqD-XP-n53"/>
+                                    <constraint firstItem="7Uv-Ma-kPX" firstAttribute="leading" secondItem="zYL-cJ-elo" secondAttribute="leading" constant="2" id="uG1-0P-ssE"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Uv-Ma-kPX" secondAttribute="bottom" constant="2" id="urs-af-ZGV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zYL-cJ-elo" secondAttribute="bottom" constant="20" id="DDa-2q-J52"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VbT-J4-1Nc" secondAttribute="trailing" id="DLg-zp-3BE"/>
                             <constraint firstItem="VbT-J4-1Nc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bJb-tn-hv8"/>
                             <constraint firstItem="VbT-J4-1Nc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jN8-Gl-FIt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VbT-J4-1Nc" secondAttribute="bottom" id="lQT-aM-uUd"/>
+                            <constraint firstItem="zYL-cJ-elo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="suk-Lp-zKK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player" id="hrW-Eq-VxF"/>
                     <connections>
+                        <outlet property="nextButton" destination="7Uv-Ma-kPX" id="2RB-IP-ilC"/>
                         <outlet property="playerTableView" destination="VbT-J4-1Nc" id="MSp-7H-vVR"/>
                     </connections>
                 </viewController>
