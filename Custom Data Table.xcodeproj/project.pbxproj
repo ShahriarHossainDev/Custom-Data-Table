@@ -17,6 +17,8 @@
 		FA2DC5E029D82EAE00BE447E /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC5DE29D82EAE00BE447E /* DataTableViewCell.swift */; };
 		FA2DC5E129D82EAE00BE447E /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2DC5DF29D82EAE00BE447E /* DataTableViewCell.xib */; };
 		FA2DC5E329D831BE00BE447E /* Extenstions+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC5E229D831BE00BE447E /* Extenstions+View.swift */; };
+		FA6211E329D929F600573BA1 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6211E129D929F600573BA1 /* TextFieldTableViewCell.swift */; };
+		FA6211E429D929F600573BA1 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6211E229D929F600573BA1 /* TextFieldTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FA2DC5DE29D82EAE00BE447E /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		FA2DC5DF29D82EAE00BE447E /* DataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTableViewCell.xib; sourceTree = "<group>"; };
 		FA2DC5E229D831BE00BE447E /* Extenstions+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extenstions+View.swift"; sourceTree = "<group>"; };
+		FA6211E129D929F600573BA1 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		FA6211E229D929F600573BA1 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 		FA2DC5DC29D82E7100BE447E /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FA6211E029D9297800573BA1 /* TextField Cell */,
 				FA2DC5DD29D82E8E00BE447E /* Data Cell */,
 			);
 			path = "Custom Cell";
@@ -173,6 +178,15 @@
 				FA2DC5DF29D82EAE00BE447E /* DataTableViewCell.xib */,
 			);
 			path = "Data Cell";
+			sourceTree = "<group>";
+		};
+		FA6211E029D9297800573BA1 /* TextField Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA6211E129D929F600573BA1 /* TextFieldTableViewCell.swift */,
+				FA6211E229D929F600573BA1 /* TextFieldTableViewCell.xib */,
+			);
+			path = "TextField Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,7 @@
 			files = (
 				FA2DC5C929D82A2800BE447E /* LaunchScreen.storyboard in Resources */,
 				FA2DC5C629D82A2800BE447E /* Assets.xcassets in Resources */,
+				FA6211E429D929F600573BA1 /* TextFieldTableViewCell.xib in Resources */,
 				FA2DC5C129D82A2600BE447E /* Main.storyboard in Resources */,
 				FA2DC5E129D82EAE00BE447E /* DataTableViewCell.xib in Resources */,
 			);
@@ -249,6 +264,7 @@
 			files = (
 				FA2DC5DB29D82CCC00BE447E /* DataViewController.swift in Sources */,
 				FA2DC5C429D82A2600BE447E /* Custom_Data_Table.xcdatamodeld in Sources */,
+				FA6211E329D929F600573BA1 /* TextFieldTableViewCell.swift in Sources */,
 				FA2DC5E029D82EAE00BE447E /* DataTableViewCell.swift in Sources */,
 				FA2DC5E329D831BE00BE447E /* Extenstions+View.swift in Sources */,
 				FA2DC5BA29D82A2600BE447E /* AppDelegate.swift in Sources */,

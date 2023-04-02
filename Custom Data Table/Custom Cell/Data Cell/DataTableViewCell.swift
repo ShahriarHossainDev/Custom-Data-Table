@@ -16,6 +16,7 @@ class DataTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         dataContentView.layer.borderWidth = 1
         dataContentView.layer.borderColor = UIColor(ciColor: .black).cgColor
         // Initialization code
@@ -31,11 +32,11 @@ class DataTableViewCell: UITableViewCell {
     
     func configurateTheCell(_ player: Player) {
         playerNameLabel.text = player.name
-        if player.favorite == false {
-            favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        } else {
-            favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        }
+//        if player.favorite == false {
+//            favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+//        } else {
+//            favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+//        }
     }
     
 }

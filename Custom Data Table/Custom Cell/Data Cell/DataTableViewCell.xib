@@ -37,7 +37,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system" title=""/>
+                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-Py-7FV">
                                         <rect key="frame" x="40" y="0.0" width="30" height="30"/>
@@ -81,7 +81,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
