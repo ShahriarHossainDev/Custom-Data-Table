@@ -59,10 +59,10 @@ class DataViewController: UIViewController {
     
     func savePlayer() {
         let actionController = UIAlertController(title: "Add New Player", message : "Enter Player Info...!", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Add", style: .default, handler: { (action) -> Void in
+        let okAction = UIAlertAction(title: "Add", style: .default, handler: { [self] (action) -> Void in
             if actionController.textFields![0].text == "" {
                 let newPlayer = Player(context: self.context)
-                newPlayer.name = "Player"
+                newPlayer.name = "Player \((items?.count ?? 0) + 1)"
                 // Save Data
                 do {
                     try self.context.save()
@@ -120,15 +120,11 @@ extension DataViewController: UITableViewDelegate, UITableViewDataSource {
                 cellTwo.plusButton.addTarget(self, action: #selector(plusSelection(_:)), for: .touchUpInside)
                 return cellTwo
             }
-        } else if indexPath.row == items?.count ?? 0 + 1 {
-            if let cellTwo = tableView.dequeueReusableCell(withIdentifier: cellITextFieldDentifier) as? TextFieldTableViewCell {
-                cellTwo.plusButton.addTarget(self, action: #selector(plusSelection(_:)), for: .touchUpInside)
-                return cellTwo
-            }
         } else {
             if let cellOne = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? DataTableViewCell {
                 cellOne.configurateTheCell(items![indexPath.row - 1])
                 cellOne.favoriteButton.addTarget(self, action: #selector(favoriteSelection(_:)), for: .touchUpInside)
+                cellOne.closeButton.addTarget(self, action: #selector(closeSelection(_:)), for: .touchUpInside)
                 return cellOne
             }
         }
@@ -195,6 +191,32 @@ extension DataViewController: UITableViewDelegate, UITableViewDataSource {
     @objc func favoriteSelection(_ sender:UIButton) {
         
         print("Favorite")
+    }
+    
+    @objc func closeSelection(_ sender:UIButton) {
+        let selectedIndexPath = IndexPath(row: sender.tag, section: 0)
+        let actionController = UIAlertController(title: "Delete Player", message : nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+            let personTORemove = self.items![selectedIndexPath.row]
+            
+            self.context.delete(personTORemove)
+            
+            do {
+                try self.context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            self.fetchPlayer()
+        } )
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        actionController.addAction(okAction)
+        actionController.addAction(cancelAction)
+        
+        self.present(actionController, animated: true, completion: nil)
+        
     }
     
     @objc func plusSelection(_ sender:UIButton) {
